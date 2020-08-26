@@ -1,7 +1,7 @@
 package ru.spbstu.gusev.githubtest
 
 import android.app.Application
-import ru.spbstu.gusev.albumsearcher.di.DI
+import ru.spbstu.gusev.githubtest.di.DI
 import ru.spbstu.gusev.githubtest.di.module.AppModule
 import toothpick.Toothpick
 import toothpick.configuration.Configuration

@@ -1,14 +1,10 @@
 package ru.spbstu.gusev.githubtest.ui
 
-import android.graphics.PorterDuff
 import android.os.Bundle
 import android.view.*
 import android.widget.ProgressBar
-import androidx.annotation.ColorInt
-import androidx.core.view.forEach
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import ru.spbstu.gusev.albumsearcher.di.DI
+import ru.spbstu.gusev.githubtest.di.DI
 import toothpick.Toothpick
 
 abstract class BaseFragment: Fragment() {

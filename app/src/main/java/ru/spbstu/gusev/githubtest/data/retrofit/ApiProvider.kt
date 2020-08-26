@@ -10,6 +10,7 @@ class ApiProvider
 @Inject constructor() : Provider<GithubApi> {
 
     private val baseUrl = "https://api.github.com"
+
     override fun get(): GithubApi =
         Retrofit.Builder()
             .addConverterFactory(MoshiConverterFactory.create())

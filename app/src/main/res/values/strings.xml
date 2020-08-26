@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">GithubTest</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="empty_list_error">List is empty</string>
+    <string name="network_error">Network error</string>
+    <string name="last_commit">Last commit:</string>
+    <string name="parents_sha">Parents sha:</string>
+    <string name="network_error_pull_refresh">Network error\n Try pull to refresh</string>
+    <string name="try_again">Try again</string>
+    <string name="authored">%1s authored</string>
+    <string name="message">"Message: %1s"</string>
 </resources>
