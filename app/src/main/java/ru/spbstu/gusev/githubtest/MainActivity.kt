@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     override fun onBackPressed() {
         if (supportFragmentManager.backStackEntryCount > 0) {
             supportFragmentManager.popBackStack()
-            navigator.backStackRemoveLast()
+            navigator.backstackRemoveLast()
         } else {
             super.onBackPressed()
         }

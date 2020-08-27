@@ -43,7 +43,7 @@ class RepositoriesListFragment : BaseFragment() {
         )
         setupRecycler()
         subscribeForData()
-        viewModel.refreshRepositoriesList()
+        viewModel.fetchGithubRepositoriesList()
         setSwipeRefreshLayout()
     }
 
@@ -89,7 +89,7 @@ class RepositoriesListFragment : BaseFragment() {
 
     private fun setupRecycler() {
         repositoriesAdapter = GithubRepositoriesAdapter {
-            viewModel.addToRepositoriesList(it)
+            viewModel.addToGithubRepositoriesList(it)
         }
         val recyclerLayoutManager = LinearLayoutManager(requireContext())
         val dividerItemDecoration = DividerItemDecoration(
@@ -111,19 +111,19 @@ class RepositoriesListFragment : BaseFragment() {
         swipeRefreshLayout = swipe_refresh_layout
 
         swipeRefreshLayout.setOnRefreshListener {
-            viewModel.refreshRepositoriesList()
+            viewModel.fetchGithubRepositoriesList()
             swipeRefreshLayout.isRefreshing = false
         }
     }
 
     private fun hideContent() {
         github_repositories_recycler.visibility = View.GONE
-        network_error_try_again_include.visibility = View.VISIBLE
+        network_error_pull_refresh_include.visibility = View.VISIBLE
     }
 
     private fun showContent() {
         github_repositories_recycler.visibility = View.VISIBLE
-        network_error_try_again_include.visibility = View.GONE
+        network_error_pull_refresh_include.visibility = View.GONE
     }
 
 }

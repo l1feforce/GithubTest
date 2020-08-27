@@ -27,7 +27,7 @@ class RepositoriesListViewModel : ViewModel() {
         Toothpick.inject(this, scope)
     }
 
-    fun refreshRepositoriesList() {
+    fun fetchGithubRepositoriesList() {
         isLoading.value = true
         viewModelScope.launch(Dispatchers.Main) {
             repositoriesListRefreshResponse.value =
@@ -36,7 +36,7 @@ class RepositoriesListViewModel : ViewModel() {
         }
     }
 
-    fun addToRepositoriesList(since: String? = null) {
+    fun addToGithubRepositoriesList(since: String? = null) {
         isLoading.value = true
         viewModelScope.launch(Dispatchers.Main) {
             repositoriesListToAddResponse.value = githubRepository.getPublicRepositoriesList(since)

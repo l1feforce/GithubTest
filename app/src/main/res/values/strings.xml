@@ -8,4 +8,5 @@
     <string name="try_again">Try again</string>
     <string name="authored">%1s authored</string>
     <string name="message">"Message: %1s"</string>
+    <string name="error">Error</string>
 </resources>

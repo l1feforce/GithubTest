@@ -25,7 +25,7 @@ class RepositoryDetailsViewModel : ViewModel() {
         Toothpick.inject(this, scope)
     }
 
-    fun refreshCommits(url: String) {
+    fun fetchCommits(url: String) {
         isLoading.value = true
         viewModelScope.launch(Dispatchers.Main) {
             commitsResponse.value =

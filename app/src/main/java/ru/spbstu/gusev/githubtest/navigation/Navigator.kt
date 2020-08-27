@@ -55,7 +55,7 @@ class Navigator {
         }
     }
 
-    fun backStackRemoveLast() {
+    fun backstackRemoveLast() {
         backstack.removeAt(backstack.size - 1)
     }
 }

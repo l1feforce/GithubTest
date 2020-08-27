@@ -12,7 +12,7 @@
         tools:context=".ui.RepositoriesListFragment">
 
         <include
-            android:id="@+id/network_error_try_again_include"
+            android:id="@+id/network_error_pull_refresh_include"
             layout="@layout/network_error_pull_refresh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

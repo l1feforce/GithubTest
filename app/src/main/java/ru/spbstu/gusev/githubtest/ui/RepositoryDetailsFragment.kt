@@ -54,7 +54,7 @@ class RepositoryDetailsFragment : BaseFragment() {
             RepositoryDetailsViewModel::class.java
         )
         subscribeForData()
-        viewModel.refreshCommits(githubRepositoryModel.commits_url.removeSuffix("{/sha}"))
+        viewModel.fetchCommits(githubRepositoryModel.commits_url.removeSuffix("{/sha}"))
     }
 
     private fun updateUi(
@@ -73,7 +73,7 @@ class RepositoryDetailsFragment : BaseFragment() {
                 }
             }
             is ResultWrapper.GenericError -> {
-                snackbarError(response.error?.error_description ?: "Error")
+                snackbarError(response.error?.error_description ?: getString(R.string.error))
             }
             is ResultWrapper.NetworkError -> {
                 snackbarError(getString(R.string.network_error))
@@ -134,7 +134,7 @@ class RepositoryDetailsFragment : BaseFragment() {
         repository_details_content_layout.visibility = View.GONE
         network_error_try_again_include.visibility = View.VISIBLE
         try_again_button.setOnClickListener {
-            viewModel.refreshCommits(githubRepositoryModel.commits_url.removeSuffix("{/sha}"))
+            viewModel.fetchCommits(githubRepositoryModel.commits_url.removeSuffix("{/sha}"))
         }
     }
 
